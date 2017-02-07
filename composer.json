@@ -1,0 +1,17 @@
+{
+    "name": "diegocosta/wp-rest-helper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diego Costa",
+            "email": "diego@diegocosta.com.br"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DiegoCosta\\WP\\RestHelper\\": "src/"
+        }
+    }
+}
