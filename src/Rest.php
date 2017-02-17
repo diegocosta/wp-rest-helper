@@ -4,7 +4,6 @@
 	class Rest
 	{
 	    public $namespace;
-	    public $version;
 
 	    private static $instance;
 
@@ -16,11 +15,10 @@
 	        return self::$instance;
 	    }
 
-	    public static function init($namespace, $version, $routes)
+	    public static function init($namespace, $routes)
 	    {
 	        $rest = self::getInstance();
 	        $rest->namespace = $namespace;
-	        $rest->version = $version;
 
 	        \add_action('rest_api_init', function() use ($rest, $routes) {
 	            $routes();

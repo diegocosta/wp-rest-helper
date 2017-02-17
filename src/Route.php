@@ -8,9 +8,8 @@
 	    private static function route($route, $response, $methods, array $args = array())
 	    {
 	        $namespace = Rest::getInstance()->namespace;
-	        $version = Rest::getInstance()->version;
 
-	        register_rest_route("{$namespace}/{$version}", $route, array(
+	        register_rest_route($namespace, $route, array(
 	            'methods' =>  $methods,
 	            'callback' => $response,
 	            'args' => $args
